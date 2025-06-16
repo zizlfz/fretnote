@@ -12,8 +12,8 @@
 
 <script setup lang="ts">
 import { ref, onMounted, watch, nextTick, type Ref } from 'vue'
-import type { Note, ExactNote, FretRange, Scale, NotePosition, DrawingDimensions } from "../types"
-import { GUITAR_TUNING, CHROMATIC_SCALE } from "../constants"
+import type { Note, ExactNote, Scale, NotePosition, DrawingDimensions } from "../types"
+import { GUITAR_TUNING } from "../constants"
 import { noteToIndex, getNoteAtFret, isExactNote } from "../utils"
 
 interface Props {
@@ -55,7 +55,6 @@ const calculateDimensions = (
 const drawStrings = (
   ctx: CanvasRenderingContext2D,
   dimensions: DrawingDimensions,
-  height: number
 ) => {
   const { margin, stringSpacing, numStrings, numFretSpaces, fretWidth } = dimensions;
   
@@ -282,7 +281,6 @@ const drawInlays = (
   dimensions: DrawingDimensions,
   startFret: number,
   endFret: number,
-  height: number
 ) => {
   const { margin, fretWidth, stringSpacing, numStrings } = dimensions;
   const inlayRadius = 8;
@@ -350,11 +348,11 @@ const drawFretboard = (
   const dimensions = calculateDimensions(startFret, endFret, height);
 
   // Draw all fretboard components in order
-  drawStrings(ctx, dimensions, height);
+  drawStrings(ctx, dimensions);
   drawFretLines(ctx, dimensions, startFret, height);
   drawFretNumbers(ctx, dimensions, startFret);
   drawStringNames(ctx, dimensions);
-  drawInlays(ctx, dimensions, startFret, endFret, height);
+  drawInlays(ctx, dimensions, startFret, endFret);
   drawScaleNotes(ctx, scale, startFret, endFret, dimensions, notePositions);
 };
 

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch, reactive, computed } from "vue";
+import { ref, watch, computed } from "vue";
 import type { Note } from "./types";
 import { CHROMATIC_SCALE, SCALE_TYPES } from "./constants";
 import { getScaleNotes, ensureUniqueLetters } from "./utils"
