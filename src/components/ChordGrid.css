@@ -1,0 +1,9 @@
+.chord-grid-section {
+  margin-bottom: 2rem;
+}
+
+.chord-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

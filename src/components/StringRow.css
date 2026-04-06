@@ -1,0 +1,42 @@
+.string-row {
+  display: flex;
+  align-items: center;
+}
+
+.string-label {
+  width: 24px;
+  min-width: 24px;
+  font-size: 12px;
+  color: #6b7280;
+  text-align: right;
+  padding-right: 8px;
+  font-weight: 500;
+}
+
+.fret-cell {
+  width: 44px;
+  min-width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 0.5px solid #e2e8f0;
+  position: relative;
+}
+
+.fret-cell--nut {
+  width: 28px;
+  min-width: 28px;
+  border-right: 3px solid #9ca3af;
+}
+
+.string-line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #d1d5db;
+  transform: translateY(-50%);
+  z-index: 0;
+}

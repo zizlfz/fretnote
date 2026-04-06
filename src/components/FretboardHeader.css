@@ -1,0 +1,29 @@
+.fretboard-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+
+.fretboard-header__spacer {
+  width: 24px;
+  min-width: 24px;
+  padding-right: 8px;
+}
+
+.fretboard-header__nut {
+  width: 28px;
+  min-width: 28px;
+}
+
+.fretboard-header__fret {
+  width: 44px;
+  min-width: 44px;
+  text-align: center;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.fretboard-header__fret--marker {
+  color: #6b7280;
+  font-weight: 500;
+}

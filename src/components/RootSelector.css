@@ -1,0 +1,59 @@
+.root-selector {
+  margin-bottom: 2rem;
+}
+
+.root-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.root-btn {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  color: #374151;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+
+.root-btn:hover {
+  background: #f1f5f9;
+}
+
+.root-btn.active {
+  background: #3C3489;
+  border-color: #3C3489;
+  color: #EEEDFE;
+}
+
+.mode-toggle {
+  display: flex;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.mode-btn {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 5px 18px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  color: #374151;
+  transition: background 0.12s, border-color 0.12s, color 0.12s;
+}
+
+.mode-btn:hover {
+  background: #f1f5f9;
+}
+
+.mode-btn.active {
+  background: #3C3489;
+  border-color: #3C3489;
+  color: #EEEDFE;
+}

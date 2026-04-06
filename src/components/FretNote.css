@@ -1,0 +1,60 @@
+.fret-note {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.fret-note--md {
+  width: 34px;
+  height: 34px;
+  font-size: 11px;
+}
+
+.fret-note--sm {
+  width: 24px;
+  height: 24px;
+  font-size: 10px;
+}
+
+.fret-note--scale {
+  background: #3C3489;
+  color: #EEEDFE;
+}
+
+.fret-note--root {
+  background: #AFA9EC;
+  color: #26215C;
+}
+
+.fret-note--empty {
+  background: transparent;
+  color: transparent;
+}
+
+.fret-note--dimmed {
+  background: #3C3489;
+  color: #EEEDFE;
+  opacity: 0.2;
+}
+
+.fret-note--chord {
+  background: transparent;
+  color: #3C3489;
+  outline: 2px solid #3C3489;
+  outline-offset: -2px;
+  font-weight: 600;
+}
+
+.fret-note--chord-root {
+  background: #AFA9EC;
+  color: #26215C;
+  outline: 2px solid #26215C;
+  outline-offset: -2px;
+  font-weight: 600;
+}

@@ -1,0 +1,44 @@
+.scale-notes {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.scale-note-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-weight: 500;
+  background: #3C3489;
+  color: #EEEDFE;
+  transition: opacity 0.15s, outline 0.15s, background 0.15s;
+  flex-shrink: 0;
+}
+
+.scale-note-circle--root {
+  background: #AFA9EC;
+  color: #26215C;
+}
+
+.scale-note-circle--chord {
+  background: transparent;
+  color: #3C3489;
+  outline: 2px solid #3C3489;
+  outline-offset: -2px;
+}
+
+.scale-note-circle--root.scale-note-circle--chord {
+  background: #AFA9EC;
+  color: #26215C;
+  outline: 2px solid #26215C;
+  outline-offset: -2px;
+}
+
+.scale-note-circle--dimmed {
+  opacity: 0.2;
+}

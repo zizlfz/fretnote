@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #111827;
+  background: #f9fafb;
+}
+
+/* Shared utility used by multiple components */
+.section-label-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.section-label {
+  font-size: 11px;
+  color: #9ca3af;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.section-label__sub {
+  color: #6b7280;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 12px;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 2rem 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.app-header {
+  margin-bottom: 2rem;
+}
+
+.app-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #111827;
+  letter-spacing: -0.01em;
+}
+
+.app-main {
+  /* children stack vertically */
+}
