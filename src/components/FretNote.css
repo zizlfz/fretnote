@@ -58,3 +58,11 @@
   outline-offset: -2px;
   font-weight: 600;
 }
+
+.fret-note--extension {
+  background: transparent;
+  color: #854F0B;
+  outline: 2px solid #EF9F27;
+  outline-offset: -2px;
+  font-weight: 600;
+}

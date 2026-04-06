@@ -4,7 +4,7 @@ import ScaleNotes from './ScaleNotes';
 import { STRINGS, NOTES, getScaleNotes } from '../utils/theory';
 import './Fretboard.css';
 
-export default function Fretboard({ root, mode, selectedChord }) {
+export default function Fretboard({ root, mode, highlightedNotes }) {
   const scaleNotes = getScaleNotes(root, mode);
   const modeLabel = mode === 'minor' ? 'natural minor' : 'major';
 
@@ -14,7 +14,7 @@ export default function Fretboard({ root, mode, selectedChord }) {
         <p className="section-label">
           Fretboard — <span className="section-label__sub">{NOTES[root]} {modeLabel} scale</span>
         </p>
-        <ScaleNotes root={root} mode={mode} selectedChord={selectedChord} />
+        <ScaleNotes root={root} mode={mode} highlightedNotes={highlightedNotes} />
       </div>
       <div className="fretboard-scroll">
         <div className="fretboard">
@@ -26,7 +26,7 @@ export default function Fretboard({ root, mode, selectedChord }) {
               stringName={name}
               scaleNotes={scaleNotes}
               root={root}
-              selectedChord={selectedChord}
+              highlightedNotes={highlightedNotes}
             />
           ))}
         </div>

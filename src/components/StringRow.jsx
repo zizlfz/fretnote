@@ -1,18 +1,23 @@
 import FretNote from './FretNote';
-import { NOTES, STRING_MIDI, POSITION_MARKERS } from '../utils/theory';
+import { NOTES, STRING_MIDI } from '../utils/theory';
 import './StringRow.css';
 
 const NUM_FRETS = 22;
 
-export default function StringRow({ stringIndex, stringName, scaleNotes, root, selectedChord }) {
+export default function StringRow({ stringIndex, stringName, scaleNotes, root, highlightedNotes }) {
   const cells = [];
+  const hasChordSelected = !!highlightedNotes;
+  const triads = highlightedNotes?.triads ?? [];
+  const extensions = highlightedNotes?.extensions ?? [];
 
   for (let fret = 0; fret <= NUM_FRETS; fret++) {
     const noteIdx = (STRING_MIDI[stringIndex] + fret) % 12;
+    const noteName = NOTES[noteIdx];
     const inScale = scaleNotes.includes(noteIdx);
     const isRoot = noteIdx === root;
     const isNut = fret === 0;
-    const inChord = selectedChord ? selectedChord.notes.includes(NOTES[noteIdx]) : false;
+    const inChord = triads.includes(noteName);
+    const isExtension = extensions.includes(noteName);
 
     cells.push(
       <div
@@ -21,11 +26,12 @@ export default function StringRow({ stringIndex, stringName, scaleNotes, root, s
       >
         {!isNut && <div className="string-line" />}
         <FretNote
-          note={NOTES[noteIdx]}
+          note={noteName}
           isRoot={isRoot}
           inScale={inScale}
           inChord={inChord}
-          hasChordSelected={!!selectedChord}
+          isExtension={isExtension}
+          hasChordSelected={hasChordSelected}
           size={isNut ? 'sm' : 'md'}
         />
       </div>

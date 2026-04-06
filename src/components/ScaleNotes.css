@@ -39,6 +39,13 @@
   outline-offset: -2px;
 }
 
+.scale-note-circle--extension {
+  background: transparent;
+  color: #854F0B;
+  outline: 2px solid #EF9F27;
+  outline-offset: -2px;
+}
+
 .scale-note-circle--dimmed {
   opacity: 0.2;
 }
