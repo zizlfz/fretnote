@@ -1,15 +1,17 @@
-import { NOTES } from '../utils/theory';
-import './RootSelector.css';
+import { NOTES } from "../utils/theory";
+import "./RootSelector.css";
 
 export default function RootSelector({ root, onChange, mode, onModeChange }) {
   return (
     <div className="root-selector">
-      <p className="section-label">Root note</p>
+      <div className="section-label-row">
+        <p className="section-label">Root note</p>
+      </div>
       <div className="root-buttons">
         {NOTES.map((note, i) => (
           <button
             key={note}
-            className={`root-btn${i === root ? ' active' : ''}`}
+            className={`root-btn${i === root ? " active" : ""}`}
             onClick={() => onChange(i)}
           >
             {note}
@@ -19,14 +21,14 @@ export default function RootSelector({ root, onChange, mode, onModeChange }) {
 
       <div className="mode-toggle">
         <button
-          className={`mode-btn${mode === 'major' ? ' active' : ''}`}
-          onClick={() => onModeChange('major')}
+          className={`mode-btn${mode === "major" ? " active" : ""}`}
+          onClick={() => onModeChange("major")}
         >
           Major
         </button>
         <button
-          className={`mode-btn${mode === 'minor' ? ' active' : ''}`}
-          onClick={() => onModeChange('minor')}
+          className={`mode-btn${mode === "minor" ? " active" : ""}`}
+          onClick={() => onModeChange("minor")}
         >
           Minor
         </button>
