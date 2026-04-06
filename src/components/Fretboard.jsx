@@ -14,7 +14,7 @@ export default function Fretboard({ root, mode, highlightedNotes }) {
         <p className="section-label">
           Fretboard — <span className="section-label__sub">{NOTES[root]} {modeLabel} scale</span>
         </p>
-        <ScaleNotes root={root} mode={mode} highlightedNotes={highlightedNotes} />
+        <ScaleNotes root={root} mode={mode} highlightedNotes={highlightedNotes} playMode="single" />
       </div>
       <div className="fretboard-scroll">
         <div className="fretboard">

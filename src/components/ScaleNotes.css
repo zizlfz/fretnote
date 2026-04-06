@@ -1,51 +1,93 @@
 .scale-notes {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
 }
 
 .scale-note-circle {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  font-weight: 500;
-  background: #3C3489;
-  color: #EEEDFE;
-  transition: opacity 0.15s, outline 0.15s, background 0.15s;
-  flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 500;
+    background: #3c3489;
+    color: #eeedfe;
+    transition:
+        opacity 0.15s,
+        outline 0.15s,
+        background 0.15s;
+    flex-shrink: 0;
 }
 
 .scale-note-circle--root {
-  background: #AFA9EC;
-  color: #26215C;
+    background: #afa9ec;
+    color: #26215c;
 }
 
 .scale-note-circle--chord {
-  background: transparent;
-  color: #3C3489;
-  outline: 2px solid #3C3489;
-  outline-offset: -2px;
+    background: transparent;
+    color: #3c3489;
+    outline: 2px solid #3c3489;
+    outline-offset: -2px;
 }
 
 .scale-note-circle--root.scale-note-circle--chord {
-  background: #AFA9EC;
-  color: #26215C;
-  outline: 2px solid #26215C;
-  outline-offset: -2px;
+    background: #afa9ec;
+    color: #26215c;
+    outline: 2px solid #26215c;
+    outline-offset: -2px;
 }
 
 .scale-note-circle--extension {
-  background: transparent;
-  color: #854F0B;
-  outline: 2px solid #EF9F27;
-  outline-offset: -2px;
+    background: transparent;
+    color: #854f0b;
+    outline: 2px solid #ef9f27;
+    outline-offset: -2px;
 }
 
 .scale-note-circle--dimmed {
-  opacity: 0.2;
+    opacity: 0.2;
+}
+
+.scale-note-circle--playing {
+    filter: brightness(1.3);
+    transform: scale(1.15);
+    transition:
+        transform 0.08s ease,
+        filter 0.08s ease;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.scale-play-btn {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    border: 1px solid #e2e8f0;
+    background: transparent;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-left: 4px;
+    transition:
+        background 0.12s,
+        border-color 0.12s,
+        color 0.12s;
+}
+
+.scale-play-btn:hover:not(.scale-play-btn--active) {
+    background: #f1f5f9;
+    border-color: #afa9ec;
+}
+
+.scale-play-btn--active {
+    background: #3c3489;
+    border-color: #3c3489;
+    color: #eeedfe;
 }

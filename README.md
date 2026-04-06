@@ -13,6 +13,8 @@ An interactive guitar fretboard visualization tool for learning music theory, sc
 - Major and minor scale modes
 - Automatic chord progression display (diatonic chords in key)
 - Note highlighting on the fretboard
+- Chord modifier selector (maj7, 7, m7, 9ths, sus chords, etc.)
+- Audio playback for scales and chords with guitar-like sound
 
 ## Tech Stack
 
@@ -57,7 +59,8 @@ src/
 ├── App.jsx              # Main application component
 ├── main.jsx             # React entry point
 ├── utils/
-│   └── theory.js        # Music theory utilities (scales, chords, intervals)
+│   ├── theory.js        # Music theory utilities (scales, chords, intervals)
+│   └── NoteAudioService.js  # Web Audio API service for note playback
 └── components/
     ├── Fretboard.jsx    # Guitar fretboard visualization
     ├── FretboardHeader.jsx

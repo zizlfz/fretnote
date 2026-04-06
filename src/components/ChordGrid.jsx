@@ -11,7 +11,7 @@ export default function ChordGrid({ root, mode, selectedChord, highlightedNotes,
     <div className="chord-grid-section">
       <div className="section-label-row">
         <p className="section-label">Chords in key</p>
-        <ScaleNotes root={root} mode={mode} highlightedNotes={highlightedNotes} />
+        <ScaleNotes root={root} mode={mode} highlightedNotes={highlightedNotes} playMode="strum" />
       </div>
       <div className="chord-grid">
         {chords.map((chord, i) => (
