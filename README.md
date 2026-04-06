@@ -4,7 +4,7 @@ An interactive guitar fretboard visualization tool for learning music theory, sc
 
 **Demo screenshot:**
 
-![fretnote demo](fretnote.png)
+![fretnote demo](public/fretnote.png)
 
 ## Features
 
